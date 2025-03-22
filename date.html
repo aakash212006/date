@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneha's Date Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .place {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .place:hover {
+            background-color: #ffccd5;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        #confirmation {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #d6336c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hey Sneha! Choose our date spot ❤️</h2>
+        <p>Choose wisely... because YOU have to pay the bill! 😜</p>
+
+        <div class="place" onclick="selectPlace('Pleo')">
+            <img src="https://source.unsplash.com/400x300/?restaurant" alt="Pleo">
+            <p>Pleo - Oriental paradise in BKC</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Blah!')">
+            <img src="https://source.unsplash.com/400x300/?cafe" alt="Blah!">
+            <p>Blah! - All-day brunch in BKC</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Donna Deli')">
+            <img src="https://source.unsplash.com/400x300/?dining" alt="Donna Deli">
+            <p>Donna Deli - Cozy cafe in Bandra</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Ilili')">
+            <img src="https://source.unsplash.com/400x300/?middleeastern" alt="Ilili">
+            <p>Ilili - Rooftop Middle Eastern charm</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Bawri')">
+            <img src="https://source.unsplash.com/400x300/?modernrestaurant" alt="Bawri">
+            <p>Bawri - Chic dining in BKC</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Onrique')">
+            <img src="https://source.unsplash.com/400x300/?trendycafe" alt="Onrique">
+            <p>Onrique - Trendy spot in Bandra</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Homemade Cafe')">
+            <img src="https://source.unsplash.com/400x300/?cozycafe" alt="Homemade Cafe">
+            <p>Homemade Cafe - Comfort food & cozy vibes</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Ammata')">
+            <img src="https://source.unsplash.com/400x300/?fine_dining" alt="Ammata">
+            <p>Ammata - Elegant dining fusion</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Grandmama\'s Cafe')">
+            <img src="https://source.unsplash.com/400x300/?vintagecafe" alt="Grandmama's Cafe">
+            <p>Grandmama's Cafe - Beloved comfort spot</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Pali Village Cafe')">
+            <img src="https://source.unsplash.com/400x300/?rusticcafe" alt="Pali Village Cafe">
+            <p>Pali Village Cafe - Rustic European charm</p>
+        </div>
+        
+        <div class="place" onclick="selectPlace('Zen Cafe')">
+            <img src="https://source.unsplash.com/400x300/?zen" alt="Zen Cafe">
+            <p>Zen Cafe - Serene & peaceful retreat</p>
+        </div>
+        
+        <div id="confirmation"></div>
+    </div>
+
+    <script>
+        function selectPlace(place) {
+            document.getElementById('confirmation').innerHTML = `You chose <b>${place}</b>! 🎉<br> Bill toh teko hi dena, mere pe paise nahi hai... soch le! 😜`;
+            document.getElementById('confirmation').style.display = "block";
+        }
+    </script>
+</body>
+</html>
